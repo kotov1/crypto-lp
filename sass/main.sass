@@ -193,8 +193,6 @@ ul
 			line-height: 56px
 			.symbol, .time
 				line-height: 39px
-		.pricing__button
-			// display: block
 
 .recomend
 	.popular
@@ -205,8 +203,6 @@ ul
 		// line-height: 56px
 		.symbol, .time
 			// line-height: 39px
-	.pricing__button
-		// display: block
 
 
 
@@ -280,7 +276,6 @@ ul
 	width: 215px
 	height: 40px
 	padding: 1em 0
-	// display: none
 	transition: all 0.2s
 
 
@@ -462,6 +457,12 @@ ul
 
 
 @media only screen and (min-width : 768px)
+
+	.wrapper
+		min-height: 100vh 
+		background-position: -400px -400px, 0 0
+		background-size: 2237px, cover
+
 	.container 
 		max-width: 720px
 		
@@ -481,23 +482,23 @@ ul
 			align-items: center
 
 		.button
-			font-size: 11px
-			padding: 5px 20px
+			width: 230px
+			font-size: 13px
+			padding: 14px 20px
 		
 		
 	.page
-		min-height: 100vh 
 		padding-top: 15px
 		padding-bottom: 30px
 			
-		h1
+		&__heading
 			font-size: 2.75em
-			padding: 0
+			padding: 0 35px
 			line-height: 1.2
 	
 	.advantages
 		width: 100%
-		margin: 20px 0 0 auto
+		margin: 20px 0 0
 		z-index: 1
 		display: flex
 		flex-wrap: wrap
@@ -532,31 +533,55 @@ ul
 			right: 0
 		&.table-center
 			z-index: 2
+		&:hover
+			.pricing__button
+				display: block
 		
 		&.recomend, &:hover
 			.popular
 				width: 85%
+
+	.recomend
+		.pricing__button
+			display: block
 		
-		.price-new
-			min-height: 110px
-			border-bottom-left-radius: 3px
-			border-bottom-right-radius: 3px
+	.price-new
+		min-height: 110px
+		border-bottom-left-radius: 3px
+		border-bottom-right-radius: 3px
 				
-		.popular
-			width: 75%
 				
-		.btn-wrap
-			width: 215px
-			max-width: 85% 
-			.pricing__button
-				width: 100%
+	.btn-wrap
+		width: 215px
+		max-width: 85% 
+		.pricing__button
+			width: 100%
+	.popular
+		width: 75%
+
+	.pricing__button
+		display: none
 
 	.paycards
+		margin-top: 0
 		width: 100%
 
+	.crypto
+		margin-top: 0
+		&-currency-wrap
+			margin-top: 0
+			max-width: 100%
+			flex-wrap: nowrap
 
-
-
+	.download
+		flex-direction: row
+		.icon
+			flex: 0 0 130px
+			max-width: 130px
+			margin: 0 10px
+			a
+				width: 130px
+				height: 40px
 
 
 
@@ -566,67 +591,60 @@ ul
 		
 	.table-wrap
 		width: 75%
-		margin: 75px auto 0 
+		margin: 35px auto 0 
 
-
+	.paycards
+		display: none
+	.crypto
+		margin-top: 30px
 
 
 
 
 @media only screen and (min-width : 1200px)
+
+
+	.wrapper
+		background-position: 0 -400px, 0 0
+		background-size: 1837px, cover
 	.container
 		max-width: 1200px
 		
-	.top-line
-
-		.country-ic
-			width: 60px
-			height: 40px
-			background-repeat: no-repeat
-			background-size: 90%
-			background-position: 100% 3px
-			margin-right: 15px
-			
-		.button
-			font-size: 13px
-			padding: 12px 25px
-			font-weight: normal
-		
-	.page
-		&::before
-			left: 11%
-			top: 14%
-
-		&__content
-			width: 65%
-			margin-left: auto
-		h1
-			padding: 0 1em
-			line-height: 1.1
-
+	.lg-wrap
+		display: block
 	.advantages
-		width: 100%
-		margin-left: 0
-		display: flex
-		flex-wrap: wrap
+		width: 80%
+		margin: 20px auto 0
 		li
-			width: 30%
+			flex: 0 0 33.33%
+			max-width: 33.33%
 			margin-bottom: 30px
-			flex-direction: column
-			align-items: center
+		&__text
+			width: 65%
 		.svg-wrap
 			margin: 0 0 10px 0
-		.advantages__text
-			text-align: center
 			
 	.table-wrap
-		width: 100%
-		margin: 0
+		width: 67%
 		
 	.table-pricing
-		width: 245px
+		width: 252px
 
-@media only screen and (min-width : 1400px)
-	.page
-		&::before
-			left: 16%
+	.crypto
+		margin-top: 0
+		align-items: flex-end
+		&-info
+			margin-bottom: 10px
+		&-currency
+			margin: 0 10px
+			&-wrap
+				margin-bottom: 0
+	.download
+		justify-content: flex-start
+
+	footer
+		display: flex
+		flex-direction: row-reverse
+		justify-content: space-between
+		align-items: flex-end
+
